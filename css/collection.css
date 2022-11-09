@@ -3,10 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container #titre{
-    color: red;
-    text-align: center;
-}
+
 .display{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -23,8 +20,8 @@ img{
     
 }
 .card{
-    width: 220px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     background-color: #eee;
 }
 .card p{

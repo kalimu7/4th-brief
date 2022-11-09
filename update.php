@@ -1,32 +1,35 @@
 <?php 
     require("connection.php");
     $id = $_GET['edit'];
+    
     if(isset($_POST['modifier'])){
         
         $nftna = $_POST['nftname'];
         $nftde = $_POST['nftdescription'];
         $nftpr = $_POST['nftprice'];
+        $old = $_POST['old_image'];
         $nftim = $_FILES['nftimage']['name'];
         $nftim_temp = $_FILES['nftimage']['tmp_name'];
         $nftim_folder = 'img/'.$nftim;
-
-        if(empty($nftna) && empty($nftde) && empty($nftpr) && empty($nftim)){
+        if(empty($nftim)){
+            $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr' where ID=$id";
+        }else{
+            $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr',image='$nftim' where ID=$id";
+        }
+        if(empty($nftna) && empty($nftde) && empty($nftpr)){
             $massage[] = "plese fill out the form";
 
         }else{
-            $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr',image='$nftim' where ID=$id";
+            // $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr',image='$nftim' where ID=$id";
             $uploaded = mysqli_query($conn,$update);
             if($uploaded){
                 move_uploaded_file($nftim_temp,$nftim_folder);
-                
                 $massage[] = "updated succefully";
                 header('location:index.php');
             }else{
                 $massage[] = "could not be updated";
             }
         }
-
-
     }
 ?>
 
@@ -46,6 +49,7 @@
 
 <body>
     <?php
+  
     if(isset($massage)){
             foreach($massage as $msg){
                 echo '<span class="msg">' .$msg. '</span>';
@@ -61,12 +65,13 @@
         ?>
 
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
-                <h3>UPDATE YOUR NFTS</h3> <br>
+                <h3>UPDATE YOUR NFTS </h3> <br>
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box" value="<?php echo $row['name']; ?>"> <br>
                 <input type="text" name="nftdescription" placeholder="enter description of your nft"value="<?php echo $row['description']; ?>" class="box"> <br>
                 <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" value="<?php echo $row['price']; ?>" class="box" min="0">
                 <br>
                 <img src="img/<?php echo $row['image']; ?>" height="150" >
+                <span name="old_image" value="<?php echo $row['image']; ?>" ><?php echo $row['image']?></span>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
                 <button type="submit" name="modifier">update</button>
                 <a href="index.php">Back</a>

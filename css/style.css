@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.formcontainer {
+    padding-top: 30px;
+}
+.formcontainer form{
+    margin: 0 auto ;
+    line-height: 20px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 10px;
+}
+.formcontainer .box{
+    background-color: white;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+.formcontainer h3{
+    text-align: center;
+}
+.formcontainer button{
+    padding: 10px;
+    color: white;
+    background-color: rgb(104, 30, 82);
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+.formcontainer a{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(10, 126, 0);
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.msg{
+    display: block;
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.nftedit{
+    width: 90%;
+    
+    /* text-align: center; */
+    margin: 0 auto;
+}
+.nftedit table{
+    margin-top: 20px;
+    /* text-align: center; */
+    width: 100%;
+}
+.nftedit thead {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #eee;
+    text-align: center;
+    
+}
+
+/* .nftedit tr{
+    border-bottom: 2px black;
+} */
+.nftedit td{
+    text-align: center;
+    padding: 10px;
+    border-bottom: solid 2px black ;
+}
+
+.container_update{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width : 530px) {
+    .nftedit{
+        overflow-x: scroll;
+    }
+}

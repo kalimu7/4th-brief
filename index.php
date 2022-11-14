@@ -12,6 +12,7 @@
 
         if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim)){
             $massage[] = "plese fill out the form";
+            
         }else{
             $query  = "INSERT INTO nfttable(name,description,price,image) VALUES('$nftna','$nftde','$nftpr','$nftim') ";
             $uploaded = mysqli_query($conn,$query);
@@ -92,8 +93,8 @@
                         <td> <?php echo $row['price']; ?> </td>
                         <td> <?php echo $row['description']; ?></td>
                         <td >
-                            <a href="update.php?edit=<?php echo $row['ID'] ?>" class="btn"><i class="fa-solid fa-pen-to-square"></i></a> <br>
-                            <a href="index.php?delete=<?php echo $row['ID'] ?>" class="btn"><i class="fa-solid fa-trash"></i></a>
+                            <a href="update.php?edit=<?php echo $row['id'] ?>" class="btn"><i class="fa-solid fa-pen-to-square"></i></a> <br>
+                            <a href="index.php?delete=<?php echo $row['id'] ?>" class="btn"><i class="fa-solid fa-trash"></i></a>
                         </td>
                      </tr>   
 

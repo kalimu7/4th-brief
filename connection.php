@@ -1,4 +1,4 @@
 <?php 
-    $conn = mysqli_connect("localhost","root","","nft projet");
+    $conn = mysqli_connect("localhost","root","","nft");
 ?>
 

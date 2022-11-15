@@ -14,8 +14,12 @@
 </head>
 
 <body>
+     
     <div class="display">
 
+       
+
+        
         <?php 
         while($row = mysqli_fetch_assoc($select)){
     ?>
@@ -24,13 +28,12 @@
             <img src="img/<?php echo $row['image']; ?> ">
             <h3><?php echo $row['name'] ?></h3>
             <p> <?php echo $row['description'] ?> </p>
-            <span><?php echo $row['price'] ?>  </span>
+            <span><?php echo $row['price'] ?> </span>
         </div>
 
         <?php 
     };
     ?>
-
 
     </div>
 </body>

@@ -1,6 +1,14 @@
 <?php
+ require("connection.php");
+ $select = mysqli_query($conn,"SELECT *FROM nfttable");
+ $selectcol = mysqli_query($conn,"SELECT *FROM collection");
+ $a=[];
+ while($col = mysqli_fetch_assoc($selectcol)){
+    array_push($a,$col['name']);
+}
 
-    require("connection.php");
+ 
+   
     if(isset($_POST['ajouter'])){
         
         $nftna = $_POST['nftname'];
@@ -9,12 +17,18 @@
         $nftim = $_FILES['nftimage']['name'];
         $nftim_temp = $_FILES['nftimage']['tmp_name'];
         $nftim_folder = 'img/'.$nftim;
-
-        if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim)){
+        $collname = $_POST['collectionname'];
+        if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim) || empty($collname)  ){
             $massage[] = "plese fill out the form";
             
+        }elseif(!in_array($collname,$a)){//just to prevent the user from adding new neft to a collection that doesnt exist
+            print_r($a);
+            $check =  in_array($collname,$a);
+            echo 'the collection name = '.$collname;
+            echo 'check'.$check;
+            $massage[] = "collection doesnt exist";
         }else{
-            $query  = "INSERT INTO nfttable(name,description,price,image) VALUES('$nftna','$nftde','$nftpr','$nftim') ";
+            $query  = "INSERT INTO nfttable(name,description,price,image,collection) VALUES('$nftna','$nftde','$nftpr','$nftim','$collname') ";
             $uploaded = mysqli_query($conn,$query);
             if($uploaded){
                 move_uploaded_file($nftim_temp,$nftim_folder);
@@ -56,6 +70,7 @@
             }
     }
     ?>
+   
     <div class="container">
         <div class="formcontainer">
 
@@ -63,7 +78,8 @@
                 <h3>ADD NEW NFTS</h3> <br>
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box"> <br>
                 <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br>
-                <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0">
+                <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0"> <br>
+                <input type="text" name="collectionname" class="box" placeholder="collection name" >
                 <br>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
                 <button type="submit" name="ajouter">add a product</button>

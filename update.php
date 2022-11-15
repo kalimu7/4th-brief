@@ -8,17 +8,17 @@
         $nftde = $_POST['nftdescription'];
         $nftpr = $_POST['nftprice'];
         $old = $_POST['old_image'];
+        $collname = $_POST['collectionname'];
         $nftim = $_FILES['nftimage']['name'];
         $nftim_temp = $_FILES['nftimage']['tmp_name'];
         $nftim_folder = 'img/'.$nftim;
         if(empty($nftim)){
-            $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr' where ID=$id";
+            $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr',collection='$collname' where ID=$id";
         }else{
-            $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr',image='$nftim' where ID=$id";
+            $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr',image='$nftim',collection='$collname' where ID=$id";
         }
         if(empty($nftna) && empty($nftde) && empty($nftpr)){
             $massage[] = "plese fill out the form";
-
         }else{
             // $update  = "UPDATE nfttable SET name='$nftna',description='$nftde',price='$nftpr',image='$nftim' where ID=$id";
             $uploaded = mysqli_query($conn,$update);
@@ -68,7 +68,8 @@
                 <h3>UPDATE YOUR NFTS </h3> <br>
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box" value="<?php echo $row['name']; ?>"> <br>
                 <input type="text" name="nftdescription" placeholder="enter description of your nft"value="<?php echo $row['description']; ?>" class="box"> <br>
-                <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" value="<?php echo $row['price']; ?>" class="box" min="0">
+                <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" value="<?php echo $row['price']; ?>" class="box" min="0"> <br>
+                <input type="text" class="box" name="collectionname" value="<?php echo $row['collection'] ?>">
                 <br>
                 <img src="img/<?php echo $row['image']; ?>" height="150" >
                 <span name="old_image" value="<?php echo $row['image']; ?>" ><?php echo $row['image']?></span>

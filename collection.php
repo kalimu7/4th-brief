@@ -29,12 +29,8 @@ while($row = mysqli_fetch_assoc($select)){
         <?php 
 };
 ?>
-
-
-        
-
     </div>
-    <a href="">add new collection</a>
+    <a href="addcollection.php">add new collection</a>
 </body>
 
 </html>

@@ -3,44 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container #titre{
-    color: red;
-    text-align: center;
-}
-.display{
-    display: grid;
-    grid-template-columns: auto auto auto;
+body {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 50px;
-    margin: 20px 0;
+    height: 100vh;
 }
-/* img{
-    display: block;
-    width: 190px;
-    height: 190px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-.card{
-    width: 220px;
-    height: 300px;
-    background-color: #eee;
-}
-.card p{
-    font-size: 10px;
-    
-} */
-/* **************************** */
+/* ************************* */
 .card{
     background-color: #282c34;
+    
     height: 400px;
     width: 300px;
     border: 1px solid #ffffff22;
     box-shadow: 0 7px 20px 5px #00000088;
     border-radius: 5px;
-    backdrop-filter: blur(7px); 
+    /* backdrop-filter: blur(7px); */
     transition: .3s;
 }
 .card .description{
@@ -72,7 +50,7 @@ hr{
     border: none;
     border-bottom: 1px solid #88888855;
     margin-top: 0;
-    margin: 6px 0;
+    margin: 3px 0;
 }
 .buttons{
     display: flex;
@@ -82,20 +60,7 @@ hr{
     color: #fff;
 }
 .card:hover{
-    transform: scale(1.02);
+    transform: scale(1.15);
     cursor: pointer;
 }
-.card .prc{
-    margin-left: 10px;
-    font-size: 20px;
-}
-.card a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    background-color: #1c2529;
-    padding: 5px 8px;
-    border-radius: 10px;
-}
-/* ****************************** */
-/* ******************************* */
+/* ************************ */

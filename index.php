@@ -57,8 +57,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 
@@ -70,7 +69,7 @@
             }
     }
     ?>
-   
+
     <div class="container">
         <div class="formcontainer">
 
@@ -78,8 +77,9 @@
                 <h3>ADD NEW NFTS</h3> <br>
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box"> <br>
                 <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br>
-                <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0"> <br>
-                <input type="text" name="collectionname" class="box" placeholder="collection name" >
+                <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0">
+                <br>
+                <input type="text" name="collectionname" class="box" placeholder="collection name">
                 <br>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
                 <button type="submit" name="ajouter">add a product</button>
@@ -87,43 +87,52 @@
         </div>
 
         <div class="nftedit">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nft Image</th>
-                        <th>Nft name</th>
-                        <th>Nft Price</th>
-                        <th>Nft Description</th>
-                        <th>action</th>
-                    </tr>
-                </thead>
 
-                <?php 
+
+            <?php 
                     $select = mysqli_query($conn,"SELECT *FROM nfttable");
                     while($row = mysqli_fetch_assoc($select)){
                 ?>
 
-                     <tr>
-                        <td> <img src="img/<?php echo $row['image']; ?>" width="150" height="100" > </td>
-                        <td> <?php echo $row['name']; ?></td>
-                        <td> <?php echo $row['price']; ?> </td>
-                        <td> <?php echo $row['description']; ?></td>
-                        <td >
-                            <a href="update.php?edit=<?php echo $row['id'] ?>" class="btn"><i class="fa-solid fa-pen-to-square"></i></a> <br>
-                            <a href="index.php?delete=<?php echo $row['id'] ?>" class="btn"><i class="fa-solid fa-trash"></i></a>
-                        </td>
-                     </tr>   
+
+
+            <!-- ******************card*************** -->
+            <div class="card">
+                <img src="img/<?php echo $row['image']; ?>" alt="" class="nftimg">
+                <div class="info">
+                    <h2 class="name"><?php echo $row['name']; ?></h2>
+                    <p class="description"><?php echo $row['description']; ?>.</p>
+
+                    <div class="price">
+                        <div style="display: flex; align-items: center;">
+                            <i class='fab fa-ethereum' style='font-size:30px'></i>
+                            <p class="prc"><?php echo $row['price']; ?> ETH</p>
+                        </div>
+                        <div class="duration">
+                            <i class="fa-solid fa-clock" style='font-size:18px'></i>
+                            <p>11 days left</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <a href="update.php?edit=<?php echo $row['id'] ?>">update</a>
+                        <a href="index.php?delete=<?php echo $row['id'] ?>">delete</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ************************************* -->
 
 
 
-                <?php
+            <?php
                     };
                 ?>
-            </table>
+
 
         </div>
 
     </div>
+    
 </body>
 
 </html>

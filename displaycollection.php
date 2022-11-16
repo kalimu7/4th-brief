@@ -2,6 +2,9 @@
     require("connection.php");
     $match = $_GET['colname'];
     $select = mysqli_query($conn,"SELECT *FROM nfttable WHERE collection = '$match' ");
+
+   
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,12 +28,30 @@
     while($row = mysqli_fetch_assoc($select)){
     ?>
     
-        <div class="card">
-            <img src="img/<?php echo $row['image']; ?> ">
-            <h3><?php echo $row['name']; ?></h3>
-            <p> <?php echo $row['description']; ?> </p>
-            <span><?php echo $row['price']; ?> </span>
-        </div>
+    <div class="card">
+                <img src="img/<?php echo $row['image']; ?>" alt="" class="nftimg">
+                <div class="info">
+                    <h2 class="name"><?php echo $row['name']; ?></h2>
+                    <p class="description"><?php echo $row['description']; ?>.</p>
+
+                    <div class="price">
+                        <div style="display: flex; align-items: center;">
+                            <i class='fab fa-ethereum' style='font-size:30px'></i>
+                            <p class="prc"><?php echo $row['price']; ?> ETH</p>
+                        </div>
+                        <div class="duration">
+                            <i class="fa-solid fa-clock" style='font-size:18px'></i>
+                            <p>11 days left</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <a href="update.php?edit=<?php echo $row['id'] ?>">update</a>
+                        <a href="collection.php?delete=<?php echo $row['id'] ?>">delete</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ************************************* -->
 
         <?php 
         };

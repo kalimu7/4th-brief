@@ -1,25 +1,26 @@
 <?php
     require("connection.php");
-    if(isset($_POST['ajouter'])){
+    $update = $_GET['editcollection'];
+    if(isset($_POST['update'])){
         $collectionname = $_POST['collectionname'];
         $artist = $_POST['artist'];
         $collectionimage = $_FILES['image']['name'];
         $imagetmp = $_FILES['image']['tmp_name'];
         $collectionimagefolder = 'img/'.$collectionimage ;
 
-        if(empty($collectionname) || empty($artist) || empty($collectionimage)){
-            $massage[] = "plese fill out the form";
+        if( empty($collectionimage)){
+            $query = "UPDATE collection SET name='$collectionname',artist='$artist' WHERE idcollection = $update";
+            $uploaded  = mysqli_query($conn,$query);
         }else{
-            $query  = "INSERT INTO collection (name,artist,image) VALUES ('$collectionname','$artist','$collectionimage') ";
+            $query = "UPDATE collection SET name='$collectionname',artist='$artist',image='$collectionimage' WHERE idcollection = $update";
             $uploaded  = mysqli_query($conn,$query);
             if($uploaded){
                 move_uploaded_file($imagetmp,$collectionimagefolder);
-                $massage[] = "succenfully inserted";
+                $massage[] = "succenfully updated";
             }else{
-                $massage[] = "couldnt be inserted";
+                $massage[] = "couldnt be updated";
             }
         }
-
     }
 ?>
 <!DOCTYPE html>
@@ -38,19 +39,28 @@
         if(isset($massage)){
             foreach($massage as $msg){
                 echo '<span class="msg">' .$msg. '</span>';
-            }
+        }
     }
+    $ds = "SELECT *FROM collection WHERE idcollection = $update";
+    $dsp = mysqli_query($conn,$ds);
+        
+        while($row = mysqli_fetch_assoc($dsp)){
     ?>
+    
     <div class="formcontainer">
     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
         <h3>ADD NEW collection</h3> <br>
-        <input type="text" name="collectionname" class="box"> <br>
-        <input type="text" name="artist" class="box"> <br>
-        <input type="file" name="image" class="box"> <br>
-        <button type="submit" name="ajouter" >ajouter</button>
+        <input type="text" name="collectionname" class="box" value="<?php echo $row['name']; ?>"> <br>
+        <input type="text" name="artist" class="box" value="<?php echo $row['artist']; ?>"> <br>
+        <input type="file" name="image" class="box" > <br>
+        <button type="submit" name="update" >update</button>
     </form>
     </div>
     
+    <?php 
+        }
+    ?>
+
 </body>
 
 </html>

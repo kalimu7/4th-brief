@@ -5,29 +5,74 @@
 }
 
 .display{
+    margin:100px 0;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
     gap: 50px;
 }
-img{
-    display: block;
-    width: 190px;
-    height: 190px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 .card{
-    width: 150px;
-    height: 150px;
-    background-color: #eee;
+    background-color: #282c34;
+    height: 400px;
+    width: 300px;
+    border: 1px solid #ffffff22;
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: 5px;
+    backdrop-filter: blur(7px); 
+    transition: .3s;
 }
-.card p{
-    font-size: 10px;
-    
+.card .description{
+    color: #a89ec9;
+    font-size: 15px;
 }
-a{
+.card .nftimg{
+    width: 280px;
+    height: 250px;
+    margin: 5px auto;
     display: block;
+    border-radius: 5px;
+}
+.card .price,.card .duration{
+    display: flex;
+}
+.card .duration{
+    color: #a89ec9;
+}
+.card .price{
+    justify-content: space-between;
+    align-items: center;
+    color: #ee83e5;
+}
+.card .info{
+    padding: 0 10pX;
+}
+hr{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #88888855;
+    margin-top: 0;
+    margin: 6px 0;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.card .name{
+    color: #fff;
+}
+.card:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.card .prc{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.card a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    background-color: #1c2529;
+    padding: 5px 8px;
+    border-radius: 10px;
 }

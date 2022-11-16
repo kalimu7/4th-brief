@@ -1,6 +1,17 @@
 <?php
     require("connection.php");
     $select = mysqli_query($conn,"SELECT *FROM collection");
+
+    if(isset($_GET['delete'])){
+        $id = $_GET['delete'];
+        mysqli_query($conn,"DELETE FROM nfttable WHERE ID = $id");
+        header('location:collection.php');
+    }
+    if(isset($_GET['deletecollection'])){
+        $idco = $_GET['deletecollection'];
+        mysqli_query($conn,"DELETE FROM collection WHERE idcollection = $idco");
+        header('location:collection.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,14 +28,36 @@
     <div class="display">
 
         <?php 
-while($row = mysqli_fetch_assoc($select)){
-?>
+        while($row = mysqli_fetch_assoc($select)){
+        ?>
+
+
 
         <div class="card">
-            <h1><?php echo $row['name'] ?></h1>
-            <h4> <?php echo $row['artist'] ?> </h4>
-            <a href="displaycollection.php?colname=<?php echo $row['name']; ?>">open</a>
+            <img src="img/<?php echo $row['image']; ?>" alt="" class="nftimg">
+            <div class="info">
+                <h2 class="name"><?php echo $row['name']; ?></h2>
+                <p class="description"><?php echo $row['artist'] ?>.</p>
+
+                <div class="price">
+                    <div style="display: flex; align-items: center;">
+                        <i class='fab fa-ethereum' style='font-size:30px'></i>
+                        <p class="prc"> ETH</p>
+                    </div>
+                    <div class="duration">
+                        <i class="fa-solid fa-clock" style='font-size:18px'></i>
+                        <p>11 days left</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="buttons">
+                    <a href="updatecollection.php?editcollection=<?php echo $row['idcollection']; ?>">update</a>
+                    <a href="collection.php?deletecollection=<?php echo $row['idcollection']; ?>">delete</a>
+                    <a href="displaycollection.php?colname=<?php echo $row['name']; ?>">open</a>
+                </div>
+            </div>
         </div>
+        <!-- ************************************* -->
 
         <?php 
 };

@@ -28,6 +28,8 @@
     while($row = mysqli_fetch_assoc($select)){
     ?>
     
+
+
     <div class="card">
                 <img src="img/<?php echo $row['image']; ?>" alt="" class="nftimg">
                 <div class="info">
@@ -58,6 +60,7 @@
         ?>
     </div>
     <a href="collection.php">Back to all the collection</a>
+    <a href="index.php?namecol=<?php echo  $match; ?>">add an nft</a>
 </body>
 
 </html>

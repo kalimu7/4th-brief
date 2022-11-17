@@ -25,7 +25,7 @@
             if($uploaded){
                 move_uploaded_file($nftim_temp,$nftim_folder);
                 $massage[] = "updated succefully";
-                header('location:index.php');
+                header('location:collection.php');
             }else{
                 $massage[] = "could not be updated";
             }

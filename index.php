@@ -1,5 +1,9 @@
 <?php
  require("connection.php");
+ 
+    $collectionName = $_GET['namecol'];
+ 
+ 
  $select = mysqli_query($conn,"SELECT *FROM nfttable");
  $selectcol = mysqli_query($conn,"SELECT *FROM collection");
  $a=[];
@@ -17,16 +21,10 @@
         $nftim = $_FILES['nftimage']['name'];
         $nftim_temp = $_FILES['nftimage']['tmp_name'];
         $nftim_folder = 'img/'.$nftim;
-        $collname = $_POST['collectionname'];
-        if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim) || empty($collname)  ){
+        $collname = $collectionName ;
+        if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim)  ){
             $massage[] = "plese fill out the form";
             
-        }elseif(!in_array($collname,$a)){//just to prevent the user from adding new neft to a collection that doesnt exist
-            print_r($a);
-            $check =  in_array($collname,$a);
-            echo 'the collection name = '.$collname;
-            echo 'check'.$check;
-            $massage[] = "collection doesnt exist";
         }else{
             $query  = "INSERT INTO nfttable(name,description,price,image,collection) VALUES('$nftna','$nftde','$nftpr','$nftim','$collname') ";
             $uploaded = mysqli_query($conn,$query);
@@ -79,7 +77,7 @@
                 <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br>
                 <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0">
                 <br>
-                <input type="text" name="collectionname" class="box" placeholder="collection name">
+                <input type="text" name="collectionname" readonly class="box" value="<?php echo $collectionName;  ?>" placeholder="collection name">
                 <br>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
                 <button type="submit" name="ajouter">add a product</button>

@@ -1,0 +1,192 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /* background-image: url('../img/bodybg.jpg'); */
+    font-family: 'Poppins', sans-serif;
+}
+ul {
+    list-style: none;
+}
+/* End Global Rules */
+/* Start Global Variables */
+:root {
+    --main-color: black;
+    --second-color: white;
+}
+/* End Global Variables */
+/* Start Container */
+.navigation-bar{
+    background-color: black;
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 170vh;
+    min-height: 100vh; */
+}
+
+/* End Container */
+/* Start Header */
+header .navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    min-height: 120px;
+}
+header nav {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--second-color);
+    padding: 0px 40px;
+}
+header .navigation-bar a .logo {
+    padding-left: 50px;
+    padding-top: 5px;
+}
+/* End Header */
+/* Start Hero section */
+.landing .home{
+    width: 100%;
+    height: 110vh;
+    background-image: url(/img/ntf-bg.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.landing .home .create {
+    color: white;
+    font-size: 120px;
+    font-weight: 500;
+    padding-left: 50px;
+    padding-top: 100px;
+}
+.landing .home .own-nft {
+    color: white;
+    font-size: 70px;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-top: 60px;
+}
+.landing .home button {
+    margin-top: 62px;
+    margin-left: 50px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: none;
+    color: var(--second-color);
+    background-color: #340E47;
+}
+/* End Hero section */
+/* Start Card */
+.card{
+    background-color: #282c34;
+    height: 400px;
+    width: 300px;
+    border: 1px solid #ffffff22;
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: 5px;
+    backdrop-filter: blur(7px); 
+    transition: .3s;
+    margin-top: 5px;
+}
+.card .description{
+    margin: 3px 0;
+    color: #a89ec9;
+}
+.card .nftimg{
+    width: 280px;
+    height: 250px;
+    margin: 5px auto;
+    display: block;
+    border-radius: 5px;
+}
+.card .price,.card .duration{
+    display: flex;
+}
+.card .duration{
+    color: #a89ec9;
+}
+.card .price{
+    justify-content: space-between;
+    align-items: center;
+    color: #ee83e5;
+}
+.card .info{
+    padding: 0 10pX;
+}
+hr{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #88888855;
+    margin-top: 0;
+    margin: 6px 0;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.card .name{
+    color: #fff;
+}
+.card:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.card .prc{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.card a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    background-color: #1c2529;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+.content-body{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(94,28,122);
+    background: linear-gradient(90deg, rgba(94,28,122,1) 0%, rgba(11,82,147,1) 100%);
+}
+.nft-card-left {
+    margin-left: 50px;
+}
+.nft-card-right {
+    margin-right: 50px;
+}
+.titre{
+    margin-left: 50px;
+}
+.content-body .add-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-body .add-buttons button{
+    margin-bottom: 40px;
+    padding: 15px 50px;
+    background-color: #340E47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+/* End Card */

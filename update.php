@@ -25,7 +25,7 @@
             if($uploaded){
                 move_uploaded_file($nftim_temp,$nftim_folder);
                 $massage[] = "updated succefully";
-                header('location:collection.php');
+                header('location:displaycollection.php?colname='.$collname);
             }else{
                 $massage[] = "could not be updated";
             }
@@ -74,7 +74,7 @@
                 <img src="img/<?php echo $row['image']; ?>" height="150" >
                 <span name="old_image" value="<?php echo $row['image']; ?>" ><?php echo $row['image']?></span>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
-                <button type="submit" name="modifier">update</button>
+                <button  type="submit" name="modifier">update</button>
                 <a href="index.php">Back</a>
             </form>
 

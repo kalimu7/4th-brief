@@ -1,12 +1,6 @@
 <?php
     require("connection.php");
     $select = mysqli_query($conn,"SELECT *FROM collection");
-
-    if(isset($_GET['delete'])){
-        $id = $_GET['delete'];
-        mysqli_query($conn,"DELETE FROM nfttable WHERE ID = $id");
-        header('location:collection.php');
-    }
     if(isset($_GET['deletecollection'])){
         $idco = $_GET['deletecollection'];
         mysqli_query($conn,"DELETE FROM collection WHERE idcollection = $idco");
@@ -53,7 +47,7 @@
                 <div class="buttons">
                     <a href="updatecollection.php?editcollection=<?php echo $row['idcollection']; ?>">update</a>
                     <a href="collection.php?deletecollection=<?php echo $row['idcollection']; ?>">delete</a>
-                    <a href="displaycollection.php?colname=<?php echo $row['name']; ?>">open</a>
+                    <a href="displaycollection.php?colname=<?php echo $row['name']; ?>&idcollection=<?php echo $row['idcollection']; ?>   ">open</a>
                 </div>
             </div>
         </div>

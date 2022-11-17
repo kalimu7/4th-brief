@@ -1,9 +1,15 @@
 <?php
+    $collectionid = $_GET["idcollection"];
     require("connection.php");
     $match = $_GET['colname'];
     $select = mysqli_query($conn,"SELECT *FROM nfttable WHERE collection = '$match' ");
+    
 
-   
+    if(isset($_GET['delete'])){
+        $id = $_GET['delete'];
+        mysqli_query($conn,"DELETE FROM nfttable WHERE ID = $id");
+        header('location:displaycollection.php?colname='.$match);
+    }
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +24,7 @@
 </head>
 
 <body> 
-    
+    <?php echo $match ?>
     <div class="container">
     <h1 id="titre" >your collection contains</h1>
     </div>
@@ -49,7 +55,7 @@
                     <hr>
                     <div class="buttons">
                         <a href="update.php?edit=<?php echo $row['id'] ?>">update</a>
-                        <a href="collection.php?delete=<?php echo $row['id'] ?>">delete</a>
+                        <a href="displaycollection.php?delete=<?=$row['id']?>&colname=<?=$match?> ">delete</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +66,7 @@
         ?>
     </div>
     <a href="collection.php">Back to all the collection</a>
-    <a href="index.php?namecol=<?php echo  $match; ?>">add an nft</a>
+    <a href="index.php?namecol=<?=$match?>&iddd=<?=$collectionid?>">add an nft</a>
 </body>
 
 </html>

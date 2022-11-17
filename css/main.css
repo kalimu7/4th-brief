@@ -97,7 +97,7 @@ header .navigation-bar a .logo {
 /* Start Card */
 .card{
     background-color: #282c34;
-    height: 400px;
+    height: 420px;
     width: 300px;
     border: 1px solid #ffffff22;
     box-shadow: 0 7px 20px 5px #00000088;
@@ -105,6 +105,7 @@ header .navigation-bar a .logo {
     backdrop-filter: blur(7px); 
     transition: .3s;
     margin-top: 5px;
+    /* padding: 50px 0; */
 }
 .card .description{
     margin: 3px 0;
@@ -188,5 +189,22 @@ hr{
     color: white;
     border: none;
     border-radius: 5px;
+}
+.discover{
+    text-align: center;
+    margin: 40px 0;
+}
+.discover h2{
+    margin: 10px 0;
+}
+.parts{
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+}
+.parts i{
+    margin-bottom:10px ;
+    font-size: 20px;
 }
 /* End Card */

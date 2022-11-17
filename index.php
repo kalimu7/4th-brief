@@ -1,6 +1,6 @@
 <?php
  require("connection.php");
- 
+    $id_colletion = $_GET['iddd'];
     $collectionName = $_GET['namecol'];
  
  
@@ -21,12 +21,13 @@
         $nftim = $_FILES['nftimage']['name'];
         $nftim_temp = $_FILES['nftimage']['tmp_name'];
         $nftim_folder = 'img/'.$nftim;
+        $collectionid = 
         $collname = $collectionName ;
         if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim)  ){
             $massage[] = "plese fill out the form";
             
         }else{
-            $query  = "INSERT INTO nfttable(name,description,price,image,collection) VALUES('$nftna','$nftde','$nftpr','$nftim','$collname') ";
+            $query  = "INSERT INTO nfttable(name,description,price,image,collection,collectionid) VALUES('$nftna','$nftde','$nftpr','$nftim','$collname','$id_colletion') ";
             $uploaded = mysqli_query($conn,$query);
             if($uploaded){
                 move_uploaded_file($nftim_temp,$nftim_folder);

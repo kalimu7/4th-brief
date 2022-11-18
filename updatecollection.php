@@ -11,12 +11,15 @@
         if( empty($collectionimage)){
             $query = "UPDATE collection SET name='$collectionname',artist='$artist' WHERE idcollection = $update";
             $uploaded  = mysqli_query($conn,$query);
+            $massage[] = "succenfully updated";
+            header('location:collection.php');
         }else{
             $query = "UPDATE collection SET name='$collectionname',artist='$artist',image='$collectionimage' WHERE idcollection = $update";
             $uploaded  = mysqli_query($conn,$query);
             if($uploaded){
                 move_uploaded_file($imagetmp,$collectionimagefolder);
                 $massage[] = "succenfully updated";
+                header('location:collection.php');
             }else{
                 $massage[] = "couldnt be updated";
             }

@@ -69,13 +69,13 @@
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box" value="<?php echo $row['name']; ?>"> <br>
                 <input type="text" name="nftdescription" placeholder="enter description of your nft"value="<?php echo $row['description']; ?>" class="box"> <br>
                 <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" value="<?php echo $row['price']; ?>" class="box" min="0"> <br>
-                <input type="text" class="box" name="collectionname" value="<?php echo $row['collection'] ?>">
+                <input type="text" class="box" readonly name="collectionname" value="<?php echo $row['collection']  ?>">
                 <br>
                 <img src="img/<?php echo $row['image']; ?>" height="150" >
                 <span name="old_image" value="<?php echo $row['image']; ?>" ><?php echo $row['image']?></span>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
                 <button  type="submit" name="modifier">update</button>
-                <a href="index.php">Back</a>
+                <a href="displaycollection.php?colname=<?php echo $row['collection']; ?>">Back</a>
             </form>
 
             <?php 

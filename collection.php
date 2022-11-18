@@ -47,7 +47,7 @@
                 <div class="buttons">
                     <a href="updatecollection.php?editcollection=<?php echo $row['idcollection']; ?>">update</a>
                     <a href="collection.php?deletecollection=<?php echo $row['idcollection']; ?>">delete</a>
-                    <a href="displaycollection.php?colname=<?php echo $row['name']; ?>&idcollection=<?php echo $row['idcollection']; ?>   ">open</a>
+                    <a href="displaycollection.php?colname=<?php echo $row['name']; ?>">open</a>
                 </div>
             </div>
         </div>

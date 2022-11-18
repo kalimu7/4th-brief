@@ -1,5 +1,5 @@
 <?php
-    $collectionid = $_GET["idcollection"];
+    // $collectionid = $_GET["idcollection"];
     require("connection.php");
     $match = $_GET['colname'];
     $select = mysqli_query($conn,"SELECT *FROM nfttable WHERE collection = '$match' ");
@@ -24,7 +24,7 @@
 </head>
 
 <body> 
-    <?php echo $match ?>
+    
     <div class="container">
     <h1 id="titre" >your collection contains</h1>
     </div>
@@ -66,7 +66,7 @@
         ?>
     </div>
     <a href="collection.php">Back to all the collection</a>
-    <a href="index.php?namecol=<?=$match?>&iddd=<?=$collectionid?>">add an nft</a>
+    <a href="index.php?namecol=<?=$match?>">add an nft</a>
 </body>
 
 </html>

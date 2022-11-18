@@ -1,14 +1,16 @@
 <?php
  require("connection.php");
-    $id_colletion = $_GET['iddd'];
-    $collectionName = $_GET['namecol'];
- 
+    // if(isset($_GET['iddd'])){
+    //     $id_colletion = $_GET['iddd'];
+    // }
+        
+    // $collectionName = $_GET['namecol'];
  
  $select = mysqli_query($conn,"SELECT *FROM nfttable");
  $selectcol = mysqli_query($conn,"SELECT *FROM collection");
  $a=[];
  while($col = mysqli_fetch_assoc($selectcol)){
-    array_push($a,$col['name']);
+    array_push($a ,$col['name'],$col['idcollection']);
 }
 
  
@@ -21,17 +23,33 @@
         $nftim = $_FILES['nftimage']['name'];
         $nftim_temp = $_FILES['nftimage']['tmp_name'];
         $nftim_folder = 'img/'.$nftim;
-        $collectionid = 
-        $collname = $collectionName ;
-        if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim)  ){
+        $collname = $_POST['collectionname'] ;
+        /*
+            get the id fro; collection table;
+            foreign key
+        */
+
+        for($i=0;$i<count($a);$i++){
+            if(strcmp( $a[$i] , $collname) == 0 ){
+                $id_colletion = $a[$i+1];         
+            }
+        }
+        //
+        if(empty($nftna) || empty($nftde) || empty($nftpr) || empty($nftim) || empty($collname)  ){
             $massage[] = "plese fill out the form";
             
+        }elseif(!in_array($collname,$a)){//just to prevent the user from adding new neft to a collection that doesnt exist
+            print_r($a);
+            $check =  in_array($collname,$a);
+            echo 'the collection name = '.$collname;
+            echo 'check'.$check;
+            $massage[] = "collection doesnt exist id d";
         }else{
             $query  = "INSERT INTO nfttable(name,description,price,image,collection,collectionid) VALUES('$nftna','$nftde','$nftpr','$nftim','$collname','$id_colletion') ";
             $uploaded = mysqli_query($conn,$query);
             if($uploaded){
                 move_uploaded_file($nftim_temp,$nftim_folder);
-                $massage[] = "new nft added succefully";
+                $massage[] = "new nft added succefully".'id de la collection = '.$id_colletion;
             }else{
                 $massage[] = "could not be added";
             }
@@ -67,6 +85,7 @@
                 echo '<span class="msg">' .$msg. '</span>';
             }
     }
+
     ?>
 
     <div class="container">
@@ -78,7 +97,7 @@
                 <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br>
                 <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0">
                 <br>
-                <input type="text" name="collectionname" readonly class="box" value="<?php echo $collectionName;  ?>" placeholder="collection name">
+                <input type="text" name="collectionname"  class="box"  placeholder="collection name">
                 <br>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
                 <button type="submit" name="ajouter">add a product</button>

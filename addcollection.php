@@ -15,6 +15,7 @@
             if($uploaded){
                 move_uploaded_file($imagetmp,$collectionimagefolder);
                 $massage[] = "succenfully inserted";
+                header('location:collection.php');
             }else{
                 $massage[] = "couldnt be inserted";
             }
@@ -48,6 +49,7 @@
         <input type="text" name="artist" class="box"> <br>
         <input type="file" name="image" class="box"> <br>
         <button type="submit" name="ajouter" >ajouter</button>
+        <a href="collection.php">back</a>
     </form>
     </div>
     

@@ -3,8 +3,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* **************header************** */
+header .navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(261, 29%, 12%);
+    height: 100px;
+    color: white;
+}
+header nav {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--second-color);
+    padding: 0px 40px;
+    
+}
+header .navigation-bar a .logo {
+    padding-left: 50px;
+    height: 50px;
+    width: 150px;
+    margin: 20px 0;
+    
+    /* padding-top: 5px; */
+}
+/* **************header************** */
+.bodycontainer{
+    background: hsl(259, 20%, 18%);
+    padding: 10px 0;
+}
 .container #titre{
-    color: red;
+    color: white;
     text-align: center;
 }
 .display{
@@ -12,7 +54,12 @@
     grid-template-columns: auto auto auto;
     justify-content: center;
     gap: 50px;
-    margin: 20px 0;
+    padding: 20px 0;
+}
+.btmlinks{
+    text-decoration: none;
+    color: white;
+    margin: 20px 50px;
 }
 /* img{
     display: block;
@@ -98,4 +145,53 @@ hr{
     border-radius: 10px;
 }
 /* ****************************** */
+/* ******************footer************ */
+footer{
+    padding:10px 60px;
+    
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: hsl(261, 29%, 12%);
+    color: white;
+    gap: 20px;
+    /* padding: 0 50px; */
+}
+footer h2{
+    color: #ffffff9c;
+    margin-bottom: 20Px;
+}
+footer .meta p{
+    padding: 15px 0;
+}
+footer .meta i{
+    padding-right: 20px;
+    
+}
+footer .exp a{
+    /* text-decoration: none underline ; */
+    color: rgb(228, 220, 220);
+    margin: 4px 0;
+    display: block;
+
+} 
+footer .contact span{
+    margin-bottom:5px ;
+}
+footer .contact i{
+    margin-right: 10px;
+}
+footer .contact div{
+    margin: 9px 0;
+}
+footer .newslatter p{
+    margin: 15px 0; 
+    
+}
+footer .newslatter button{
+    background-color: transparent;
+}
+footer .newslatter i{
+    color: #6d338a;
+}
+/* ******************footer************ */
 /* ******************************* */

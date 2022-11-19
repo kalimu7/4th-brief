@@ -19,34 +19,42 @@
 </head>
 <body>
     <!-- Start Header -->
-    <header>
-        <div class="navigation-bar">
-            <a href="" class="logo">
-                <img  class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Collection</a></li>
-                    <li><a href="#">Statistiques</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    
     <!-- End Header -->
     <!-- Start Landing -->
     <div class="landing">
         <div class="home">
-        <p class="create">Create</p>
-        <p class="own-nft">Your own NFT</p>
-        <button>View collection</button>
+            <header>
+                <div class="navigation-bar">
+                    <a href="" class="logo">
+                        <img  class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
+                    </a>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Acceuil</a></li>
+                            <li><a href="#">Collection</a></li>
+                            <li><a href="#">Statistiques</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        <div class="homecontainer">
+            <div class="col">
+                <h1 class="create">Create</h1>
+                <h2 class="own-nft">Your own NFT</h2>
+                <button><a href="http://localhost/4th-brief/collection.php">View collection</a></button>
+            </div>
+            <div class="col1">
+                <img src="/img/nft_image_home-removebg-preview.png" alt="" srcset="">
+            </div>
+        </div>
         </div>
     </div>
     <!-- End Landing -->
     <!-- Start Cards -->
     <div class="content-body">
         <div>
-        <h2 class="titre">our nft be like</h2>
+        <h2  class="titre">our nft be like</h2>
         <div class="card nft-card-left">
             <img src="/img/nft-test.png" alt="" class="nftimg">
             <div class="info">
@@ -72,11 +80,11 @@
         </div>
     </div>
         <div class="add-buttons">
-            <button>Add NFT</button>
-            <button>Add Collection</button>
+            <button><a  href="http://localhost/4th-brief/index.php"> Add NFT</a></button>
+            <button><a  href="http://localhost/4th-brief/addcollection.php"> Add Collection</a></button>
         </div>
     <div>
-        <h2 >our collection be like</h2>
+        <h2 class="titre1" >our collection be like</h2>
     
         <div class="card nft-card-right">
             <img src="img/nft-collection.jpg" alt="" class="nftimg">
@@ -117,7 +125,8 @@
                 <p>Lorem ipsum dolor sit.lorem <br> Lorem ipsum dolor sit amet. <br> Lorem ipsum dolor sit.</p>
             </div>
             <div class="add">
-                <img src="/img/add-layer-layers-svgrepo-com.svg" width="30px" height="30px" style="background: rgb(255, 255, 255)  ;" alt="" srcset="">
+                <!-- <img src="/img/add-layer-layers-svgrepo-com.svg" width="30px" height="30px" style="background: rgb(255, 255, 255)  ;" alt="" srcset=""> -->
+                <i class="fa-solid fa-folder-plus"></i>
                 <h3>Add Your Nft</h3>
                 <p>Lorem ipsum dolor sit.lorem <br> Lorem ipsum dolor sit amet. <br> Lorem ipsum dolor sit.</p>
             </div>
@@ -129,5 +138,41 @@
         </div>
     </div>
     <!-- End Discover -->
+    <!-- ************footer************** -->
+    <footer>
+        <div class="meta">
+            <h2>METAVERSE</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+        <div class="exp">
+            <h2>Explore</h2>
+            <a href="#">About</a> 
+            <a href="#">About</a> 
+            <a href="#">About</a> 
+            <a href="#">About</a>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div><i class="fa-solid fa-envelope"></i> <span>Lorem, ipsum dolor@gmail.com</span></div> 
+            <div><i class="fa-solid fa-phone"></i> <span>+2126-87879978</span></div> 
+            <div><i class="fa-solid fa-location-pin"></i> <span>Lorem ipsum dolor sit.</span></div>
+        </div>
+        <div class="newslatter">
+            <h2>Newslatter</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <input type="email" placeholder="your feedback"> <button><i class="fa-sharp fa-solid fa-rocket"></i></button>
+        </div>
+
+    </footer>
 </body>
 </html>

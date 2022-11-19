@@ -79,6 +79,22 @@
 </head>
 
 <body>
+
+    <header>
+        <div class="navigation-bar">
+            <a href="" class="logo">
+                <img class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">Statistiques</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="msg1">
     <?php
     if(isset($massage)){
             foreach($massage as $msg){
@@ -87,9 +103,9 @@
     }
 
     ?>
-
+    </div>
     <div class="container">
-        <div class="formcontainer">
+       <div class="formcontainer">
 
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
                 <h3>ADD NEW NFTS</h3> <br>
@@ -97,7 +113,7 @@
                 <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br>
                 <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0">
                 <br>
-                <input type="text" name="collectionname"  class="box"  placeholder="collection name">
+                <input type="text" name="collectionname" class="box" placeholder="collection name">
                 <br>
                 <input type="file" name="nftimage" accept="image/png,image/jpeg,image/jpg" class="box"> <br>
                 <button type="submit" name="ajouter">add a product</button>
@@ -108,14 +124,14 @@
 
 
             <?php 
-                    $select = mysqli_query($conn,"SELECT *FROM nfttable");
-                    while($row = mysqli_fetch_assoc($select)){
+                    // $select = mysqli_query($conn,"SELECT *FROM nfttable");
+                    // while($row = mysqli_fetch_assoc($select)){
                 ?>
 
 
 
             <!-- ******************card*************** -->
-            <div class="card">
+            <!-- <div class="card">
                 <img src="img/<?php echo $row['image']; ?>" alt="" class="nftimg">
                 <div class="info">
                     <h2 class="name"><?php echo $row['name']; ?></h2>
@@ -137,20 +153,56 @@
                         <a href="index.php?delete=<?php echo $row['id'] ?>">delete</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- ************************************* -->
 
 
 
             <?php
-                    };
+                    // };
                 ?>
 
 
         </div>
 
     </div>
-    
+    <footer>
+        <div class="meta">
+            <h2>METAVERSE</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+        <div class="exp">
+            <h2>Explore</h2>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div><i class="fa-solid fa-envelope"></i> <span>Lorem, ipsum dolor@gmail.com</span></div>
+            <div><i class="fa-solid fa-phone"></i> <span>+2126-87879978</span></div>
+            <div><i class="fa-solid fa-location-pin"></i> <span>Lorem ipsum dolor sit.</span></div>
+        </div>
+        <div class="newslatter">
+            <h2>Newslatter</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <input type="email" placeholder="your feedback"> <button><i
+                    class="fa-sharp fa-solid fa-rocket"></i></button>
+        </div>
+
+    </footer>
+
 </body>
 
 </html>

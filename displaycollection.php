@@ -24,6 +24,22 @@
 </head>
 
 <body> 
+<header>
+        <div class="navigation-bar">
+            <a href="" class="logo">
+                <img class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">Statistiques</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bodycontainer">
+
     
     <div class="container">
     <h1 id="titre" >your collection contains</h1>
@@ -35,7 +51,7 @@
     ?>
     
 
-
+    
     <div class="card">
                 <img src="img/<?php echo $row['image']; ?>" alt="" class="nftimg">
                 <div class="info">
@@ -65,8 +81,45 @@
         };
         ?>
     </div>
-    <a href="collection.php">Back to all the collection</a>
-    <a href="index.php?namecol=<?=$match?>">add an nft</a>
+    <a class="btmlinks" href="collection.php">Back to all the collection</a>
+    <a class="btmlinks" href="index.php?namecol=<?=$match?>">add an nft</a>
+    </div>
+    <footer>
+        <div class="meta">
+            <h2>METAVERSE</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+        <div class="exp">
+            <h2>Explore</h2>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div><i class="fa-solid fa-envelope"></i> <span>Lorem, ipsum dolor@gmail.com</span></div>
+            <div><i class="fa-solid fa-phone"></i> <span>+2126-87879978</span></div>
+            <div><i class="fa-solid fa-location-pin"></i> <span>Lorem ipsum dolor sit.</span></div>
+        </div>
+        <div class="newslatter">
+            <h2>Newslatter</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <input type="email" placeholder="your feedback"> <button><i
+                    class="fa-sharp fa-solid fa-rocket"></i></button>
+        </div>
+
+    </footer>
 </body>
 
 </html>

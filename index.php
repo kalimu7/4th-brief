@@ -111,6 +111,7 @@
                 <h3>ADD NEW NFTS</h3> <br>
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box"> <br>
                 <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br>
+                
                 <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0">
                 <br>
                 <input type="text" name="collectionname" class="box" placeholder="collection name">

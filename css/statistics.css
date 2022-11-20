@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* *************header******************** */
 header .navigation-bar {
     display: flex;
@@ -42,99 +41,7 @@ header .navigation-bar a .logo {
     /* padding-top: 5px; */
 }
 /* **************header************** */
-/* ***container***** */
-.container{
-    background: hsl(259, 20%, 18%);
-    padding-bottom: 30px;
-}
-.container .addnftlink{
-    text-decoration: none;
-    color: white;
-    padding-left: 50px;
-}
-.container .titre{
-    text-align: center;
-    color: white;
-    margin-bottom: 10px;
-    /* padding-bottom: 30px; */
-}
-
-/* ***container***** */
-.display{
-    
-    background: hsl(259, 20%, 18%);
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-    gap: 50px;
-}
-.card{
-    background-color: #282c34;
-    height: 380px;
-    width: 300px;
-    border: 1px solid #ffffff22;
-    box-shadow: 0 7px 20px 5px #00000088;
-    border-radius: 5px;
-    backdrop-filter: blur(7px); 
-    transition: .3s;
-}
-.card .description{
-    color: #a89ec9;
-    font-size: 15px;
-}
-.card .nftimg{
-    width: 280px;
-    height: 250px;
-    margin: 5px auto;
-    display: block;
-    border-radius: 5px;
-}
-.card .price,.card .duration{
-    display: flex;
-}
-.card .duration{
-    color: #a89ec9;
-}
-.card .price{
-    justify-content: space-between;
-    align-items: center;
-    color: #ee83e5;
-}
-.card .info{
-    padding: 0 10pX;
-}
-hr{
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #88888855;
-    margin-top: 0;
-    margin: 6px 0;
-}
-.buttons{
-    display: flex;
-    justify-content: space-between;
-}
-.card .name{
-    color: #fff;
-}
-.card:hover{
-    transform: scale(1.02);
-    cursor: pointer;
-}
-.card .prc{
-    margin-left: 10px;
-    font-size: 20px;
-}
-.card a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    background-color: #1c2529;
-    padding: 5px 8px;
-    border-radius: 10px;
-}
-
-/* ******foooter********** */
+/* **************footer******* */
 footer{
     padding:10px 60px;
     
@@ -181,4 +88,118 @@ footer .newslatter button{
 }
 footer .newslatter i{
     color: #6d338a;
+}
+/* **************footer******* */
+/* *****container***** */
+
+.container{
+    /* height: 80vh; */
+    background: hsl(259, 20%, 18%);
+    /* display: flex; */
+}
+.container h1{
+    text-align: center;
+    color: white;
+}
+.cardcon{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 200px;
+    justify-content: center;
+    padding: 50px 0;
+}
+.card{
+    width: 300px;
+    height: 150px;
+    background-color: hsl(261, 29%, 12%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+.card div{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 0 20px;
+}
+.card i{
+    font-size: 25px;
+    margin: 0 1px;
+}
+.total{
+    font-size: 40px;
+    text-align: center;
+}
+.card h2{
+    text-align: start;
+}
+/* ***********card1********** */
+.card1{
+    background-color: #282c34;
+    /* height: 380px; */
+    width: 300px;
+    border: 1px solid #ffffff22;
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.card1 .description{
+    color: #a89ec9;
+    font-size: 15px;
+}
+.card1 .nftimg{
+    width: 280px;
+    height: 250px;
+    margin: 5px auto;
+    display: block;
+    border-radius: 5px;
+}
+.card1 .price,.card .duration{
+    display: flex;
+}
+.card1 .duration{
+    color: #a89ec9;
+}
+.card1 .price{
+    justify-content: space-between;
+    align-items: center;
+    color: #ee83e5;
+}
+.card1 .info{
+    padding: 0 10pX;
+}
+hr{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #88888855;
+    margin-top: 0;
+    margin: 6px 0;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.card1 .name{
+    color: #fff;
+}
+.card1:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.card1 .prc{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.card1 a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    background-color: #1c2529;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+.card2{
+    justify-content: flex-start;
+    padding: 4px 0;
 }

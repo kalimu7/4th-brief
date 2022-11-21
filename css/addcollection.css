@@ -41,6 +41,10 @@ header .navigation-bar a .logo {
     /* padding-top: 5px; */
 }
 /* **************header************** */
+.conform{
+    background-color: hsl(259, 20%, 18%);
+    min-height: 82vh;
+}
 .container{
     height: calc(100vh - 100px);
     background: hsl(259, 20%, 18%);
@@ -88,7 +92,7 @@ header .navigation-bar a .logo {
     margin-top: 10px;
     padding: 10px;
     color: white;
-    background-color: rgb(10, 126, 0);
+    background-color: rgba(104, 30, 82, 0.872);
     outline: none;
     border: none;
     border-radius: 2px;
@@ -143,4 +147,5 @@ footer .newslatter button{
 footer .newslatter i{
     color: #6d338a;
 }
+
 /* ************foooter*************** */

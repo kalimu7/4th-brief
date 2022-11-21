@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- *************font awesome************** -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Css File -->
     <link rel="stylesheet" href="css/main.css">
     <title>Acceuil</title>
 </head>
+
 <body>
     <!-- Start Header -->
-    
+
     <!-- End Header -->
     <!-- Start Landing -->
     <div class="landing">
@@ -27,97 +31,99 @@
             <header>
                 <div class="navigation-bar">
                     <a href="" class="logo">
-                        <img  class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
+                        <img class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
                     </a>
                     <nav>
                         <ul>
-                            <li><a href="#">Acceuil</a></li>
-                            <li><a href="#">Collection</a></li>
-                            <li><a href="#">Statistiques</a></li>
+                            <li><a href="home.php">Acceuil</a></li>
+                            <li><a href="collection.php">Collection</a></li>
+                            <li><a href="statistics.php">Statistiques</a></li>
                         </ul>
                     </nav>
-                </div>
+                    <i class="fa-sharp fa-solid fa-list" id="humb"></i>
+                </div>  
             </header>
-        <div class="homecontainer">
-            <div class="col">
-                <h1 class="create">Create</h1>
-                <h2 class="own-nft">Your own NFT</h2>
-                <button><a href="http://localhost/4th-brief/collection.php">View collection</a></button>
+            <div class="homecontainer">
+                <div class="col">
+                    <h1 class="create">Create</h1>
+                    <h2 class="own-nft">Your own NFT</h2>
+                    <button><a href="http://localhost/4th-brief/collection.php">View collection</a></button>
+                </div>
+                <div class="col1">
+                    <img src="./img/nft_image_home-removebg-preview.png" alt="" srcset="">
+                </div>
             </div>
-            <div class="col1">
-                <img src="/img/nft_image_home-removebg-preview.png" alt="" srcset="">
-            </div>
-        </div>
         </div>
     </div>
     <!-- End Landing -->
     <!-- Start Cards -->
     <div class="content-body">
-        <div>
-        <h2  class="titre">our nft be like</h2>
-        <div class="card nft-card-left">
-            <img src="/img/nft-test.png" alt="" class="nftimg">
-            <div class="info">
-            <h2 class="name">Bored Apes</h2>
-            <p class="description">Bullrun Babes are 8888 uniquely generated collectibles built.</p>
-            
-            <div class="price">
-                <div style="display: flex; align-items: center;">
-                    <i class='fab fa-ethereum' style='font-size:30px'></i>
-                        <p>10 ETH</p>
-                </div>
-                <div class="duration">
-                <i class="fa-solid fa-clock" style='font-size:18px'></i>
-                <p>11 days left</p>
-                </div>
-            </div>
-            <hr>
-            <div class="buttons">
-                <a href="">update</a>
-                <a href="">delete</a>
-            </div>
-            </div>
-        </div>
-    </div>
-        <div class="add-buttons">
-            <button><a  href="http://localhost/4th-brief/index.php"> Add NFT</a></button>
-            <button><a  href="http://localhost/4th-brief/addcollection.php"> Add Collection</a></button>
-        </div>
-    <div>
-        <h2 class="titre1" >our collection be like</h2>
-    
-        <div class="card nft-card-right">
-            <img src="img/nft-collection.jpg" alt="" class="nftimg">
-            <div class="info">
-                <h2 class="name">Bored</h2>
-                <p class="description">van gogh</p>
+        <div class="el1">
+            <h2 class="titre">our nft be like</h2>
+            <div class="card nft-card-left">
+                <img src="./img/nft-test.png" alt="" class="nftimg">
+                <div class="info">
+                    <h2 class="name">Bored Apes</h2>
+                    <p class="description">Bullrun Babes are 8888 uniquely generated collectibles built.</p>
 
-                <div class="price">
-                    <!-- <div style="display: flex; align-items: center;">
+                    <div class="price">
+                        <div style="display: flex; align-items: center;">
+                            <i class='fab fa-ethereum' style='font-size:30px'></i>
+                            <p>10 ETH</p>
+                        </div>
+                        <div class="duration">
+                            <i class="fa-solid fa-clock" style='font-size:18px'></i>
+                            <p>11 days left</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <a href="">update</a>
+                        <a href="">delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="add-buttons">
+            <button><a href="http://localhost/4th-brief/index.php"> Add NFT</a></button>
+            <button><a href="http://localhost/4th-brief/addcollection.php"> Add Collection</a></button>
+        </div>
+        <div class="el1">
+            <h2 class="titre1">our collection be like</h2>
+
+            <div class="card nft-card-right">
+                <img src="img/nft-collection.jpg" alt="" class="nftimg">
+                <div class="info">
+                    <h2 class="name">Bored</h2>
+                    <p class="description">van gogh</p>
+
+                    <div class="price">
+                        <!-- <div style="display: flex; align-items: center;">
                         <i class='fab fa-ethereum' style='font-size:30px'></i>
                         <p class="prc"> ETH</p>
                     </div> -->
-                    <!-- <div class="duration">
+                        <!-- <div class="duration">
                         <i class="fa-solid fa-clock" style='font-size:18px'></i>
                         <p>11 days left</p>
                     </div> -->
-                </div>
-                <hr>
-                <div class="buttons">
-                    <a href="">update</a>
-                    <a href="">delete</a>
-                    <a href="">open</a>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <a href="">update</a>
+                        <a href="">delete</a>
+                        <a href="">open</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
     <!-- End Cards -->
     <!-- Start Discover -->
     <div class="discover">
         <h2>How it Works</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum incidunt saepe quod vitae quis <br> pariatur doloribus inventore vero atque provident illo, natus nesciunt porro ipsam accusamus </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum incidunt saepe quod vitae quis <br>
+            pariatur doloribus inventore vero atque provident illo, natus nesciunt porro ipsam accusamus </p>
         <div class="parts">
             <div class="sellyournft">
                 <i class="fa-solid fa-wallet"></i>
@@ -154,15 +160,15 @@
         </div>
         <div class="exp">
             <h2>Explore</h2>
-            <a href="#">About</a> 
-            <a href="#">About</a> 
-            <a href="#">About</a> 
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
             <a href="#">About</a>
         </div>
         <div class="contact">
             <h2>Contact Us</h2>
-            <div><i class="fa-solid fa-envelope"></i> <span>Lorem, ipsum dolor@gmail.com</span></div> 
-            <div><i class="fa-solid fa-phone"></i> <span>+2126-87879978</span></div> 
+            <div><i class="fa-solid fa-envelope"></i> <span>Lorem, ipsum dolor@gmail.com</span></div>
+            <div><i class="fa-solid fa-phone"></i> <span>+2126-87879978</span></div>
             <div><i class="fa-solid fa-location-pin"></i> <span>Lorem ipsum dolor sit.</span></div>
         </div>
         <div class="newslatter">
@@ -170,9 +176,12 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
             </p>
-            <input type="email" placeholder="your feedback"> <button><i class="fa-sharp fa-solid fa-rocket"></i></button>
+            <input type="email" placeholder="your feedback"> <button><i
+                    class="fa-sharp fa-solid fa-rocket"></i></button>
         </div>
 
     </footer>
+    <script src="./logic.js"></script>
 </body>
+
 </html>

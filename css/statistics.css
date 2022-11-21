@@ -103,8 +103,8 @@ footer .newslatter i{
 }
 .cardcon{
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 200px;
+    grid-template-columns: auto auto ;
+    gap: 100px;
     justify-content: center;
     padding: 50px 0;
 }

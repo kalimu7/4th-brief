@@ -43,9 +43,9 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Collection</a></li>
-                    <li><a href="#">Statistiques</a></li>
+                    <li><a href="home.php">Acceuil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="statistics.php">Statistiques</a></li>
                 </ul>
             </nav>
         </div>

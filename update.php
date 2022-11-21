@@ -48,8 +48,21 @@
 </head>
 
 <body>
+<header>
+        <div class="navigation-bar">
+            <a href="" class="logo">
+                <img class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="home.php">Acceuil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="statistics.php">Statistiques</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <?php
-  
     if(isset($massage)){
             foreach($massage as $msg){
                 echo '<span class="msg">' .$msg. '</span>';
@@ -67,8 +80,9 @@
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
                 <h3>UPDATE YOUR NFTS </h3> <br>
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box" value="<?php echo $row['name']; ?>"> <br>
-                <input type="text" name="nftdescription" placeholder="enter description of your nft"value="<?php echo $row['description']; ?>" class="box"> <br>
-                <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" value="<?php echo $row['price']; ?>" class="box" min="0"> <br>
+                <!-- <input type="text" name="nftdescription" placeholder="enter description of your nft"value="" class="box"> <br> -->
+                <textarea name="nftdescription" class="box" value="<?php echo $row['description']; ?>"><?php echo $row['description']; ?></textarea> <br>
+                <input type="number"  name="nftprice" placeholder="enter the price of your nft ETH" value="<?php echo $row['price']; ?>" class="box" min="0"> <br>
                 <input type="text" class="box" readonly name="collectionname" value="<?php echo $row['collection']  ?>">
                 <br>
                 <img src="img/<?php echo $row['image']; ?>" height="150" >
@@ -84,6 +98,42 @@
 
         </div>
     </div>
+    <footer>
+        <div class="meta">
+            <h2>METAVERSE</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+        <div class="exp">
+            <h2>Explore</h2>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div><i class="fa-solid fa-envelope"></i> <span>Lorem, ipsum dolor@gmail.com</span></div>
+            <div><i class="fa-solid fa-phone"></i> <span>+2126-87879978</span></div>
+            <div><i class="fa-solid fa-location-pin"></i> <span>Lorem ipsum dolor sit.</span></div>
+        </div>
+        <div class="newslatter">
+            <h2>Newslatter</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Earum.
+            </p>
+            <input type="email" placeholder="your feedback"> <button><i
+                    class="fa-sharp fa-solid fa-rocket"></i></button>
+        </div>
+
+    </footer>
 </body>
 
 </html>

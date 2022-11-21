@@ -6,6 +6,13 @@
     margin: 0;
     padding: 0;
 }
+#humb{
+    color: white;
+    position: fixed;
+    top: 40px;
+    right: 50px;
+    display: none;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -34,11 +41,19 @@ ul {
 
 /* End Container */
 /* Start Header */
+
 header .navigation-bar {
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.048);
+    background-color: rgb(38, 29, 46);
     height: 100px;
+    z-index: 1001;
+    padding-bottom: 10px;
 }
 header nav {
     flex:1;
@@ -50,11 +65,13 @@ header nav {
 }
 header nav ul {
     display: flex;
+    color: white;
 }
 header nav ul li a {
+    color: white;
     display: block;
     text-decoration: none;
-    color: var(--second-color);
+    /* color: var(--second-color); */
     padding: 0px 40px;
     
 }
@@ -88,9 +105,10 @@ header .navigation-bar a .logo {
 }
 .landing .home .own-nft {
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 400;
     padding-left: 50px;
+    margin-top: -35px;
     /* padding-top: 20px; */
 }
 .landing .home button {
@@ -104,6 +122,7 @@ header .navigation-bar a .logo {
 }
 .homecontainer{
     display: flex;
+    padding-top: 100px;
 }
 .col{
     width:50%;
@@ -112,7 +131,7 @@ header .navigation-bar a .logo {
     width: 50%;
 }
 .col1 img{
-    padding-left: 180px;
+    padding-left: 260px;
     height: 450px;
     padding-top: 20px;
 }
@@ -291,3 +310,93 @@ footer .newslatter button{
 footer .newslatter i{
     color: #6d338a;
 }
+/* ***************responsive**************** */
+@media screen and (max-width :1166px) {
+    footer{
+        grid-template-columns: auto auto auto ;
+        gap: 20px;
+    }
+    .col1 img{
+        padding-left: 150px;
+    }
+}
+@media screen and (max-width : 946px) {
+    .col1 img{
+        padding-left: 0;
+    }
+    .content-body{
+        flex-direction: column;
+        align-items: center;
+    }   
+    .content-body .el1{
+        padding: 0;
+        margin: 0;
+    }
+    .content-body .el1 .card{
+        padding: 0;
+        margin: 10px 0;
+    }
+    .content-body .el1 .card .titre{
+        text-align: start;
+    }
+    .parts{
+        grid-template-columns: auto auto;
+    }
+    footer{
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width :690px) {
+    #humb{
+        display: block;
+        z-index: 1000;
+    }
+    
+    footer{
+        grid-template-columns: auto;
+    }
+    .parts{
+        grid-template-columns: auto;
+    }
+    header nav ul{
+        /* display: none; */
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #1c2529;
+        z-index: 1000;
+    }
+    
+    .discover p{
+        font-size: 10px;
+    }
+    .col1 img{
+        width: 200px;
+        /* padding-left: 60px; */
+    }
+    
+    .col{
+        padding: 0;
+        margin-top: 50px;
+    }
+    .landing .home .create{
+        font-size: 40px;
+        font-weight: 20;
+    }
+    .landing .home .own-nft{
+        font-size: 40px;
+        font-weight: 20;
+    }
+}
+.show{
+    right: 0;
+}
+/* ***************responsive**************** */

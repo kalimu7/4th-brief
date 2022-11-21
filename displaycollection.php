@@ -23,36 +23,38 @@
     <link rel="stylesheet" href="css/display.css">
 </head>
 
-<body> 
-<header>
+<body>
+    <header>
         <div class="navigation-bar">
             <a href="" class="logo">
                 <img class="logo" src="img/NFTealogov1.png" alt="NFT LOGO">
             </a>
             <nav>
                 <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Collection</a></li>
-                    <li><a href="#">Statistiques</a></li>
+                    <li><a href="home.php">Acceuil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="statistics.php">Statistiques</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="bodycontainer">
 
-    
-    <div class="container">
-    <h1 id="titre" >your collection contains</h1>
-    </div>
-    <div class="display">
-    
-    <?php 
+
+        <div class="container">
+            <a class="btmlinks" href="collection.php">Back to all the collection</a>
+            <h1 id="titre">your collection contains</h1>
+            <a class="btmlinks" href="index.php?namecol=<?=$match?>">add an nft</a>
+        </div>
+        <div class="display">
+
+            <?php 
     while($row = mysqli_fetch_assoc($select)){
     ?>
-    
 
-    
-    <div class="card">
+
+
+            <div class="card">
                 <img src="img/<?php echo $row['image']; ?>" alt="" class="nftimg">
                 <div class="info">
                     <h2 class="name"><?php echo $row['name']; ?></h2>
@@ -77,12 +79,11 @@
             </div>
             <!-- ************************************* -->
 
-        <?php 
+            <?php 
         };
         ?>
-    </div>
-    <a class="btmlinks" href="collection.php">Back to all the collection</a>
-    <a class="btmlinks" href="index.php?namecol=<?=$match?>">add an nft</a>
+        </div>
+        
     </div>
     <footer>
         <div class="meta">

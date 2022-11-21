@@ -25,9 +25,9 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Collection</a></li>
-                    <li><a href="#">Statistiques</a></li>
+                    <li><a href="home.php">Acceuil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="statistics.php">Statistiques</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,13 +56,15 @@
     ?>
     <!-- ****container**** -->
     <div class="container">
+        
         <h1>statistics</h1>
+        <div style="margin : 10px auto;" class="card">
+            <h2>Total Nfts</h2>
+            <?php echo '<span class="total" >'.$data['ttl'].'</span>' ?> <br>
+            <div> <i class="fa-solid fa-chart-simple" ></i><i class="fa-solid fa-chart-simple"></i></div>
+        </div>
         <div class="cardcon">
-            <div class="card">
-                <h2>Total Nfts</h2>
-                <?php echo '<span class="total" >'.$data['ttl'].'</span>' ?> <br>
-                <div> <i class="fa-solid fa-chart-simple"></i><i class="fa-solid fa-chart-simple"></i></div>
-            </div>
+
 
             <div>
                 <div class="card card2">

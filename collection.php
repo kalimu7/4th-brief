@@ -15,12 +15,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/collection.css">
 </head>
 
 <body>
-
-
     <header>
         <div class="navigation-bar">
             <a href="" class="logo">
@@ -28,16 +29,21 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Collection</a></li>
-                    <li><a href="#">Statistiques</a></li>
+                    <li><a href="home.php">Acceuil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="statistics.php">Statistiques</a></li>
                 </ul>
             </nav>
+            <i class="fa-sharp fa-solid fa-list" id="humb"></i>
         </div>
     </header>
 
     <div class="container">
-        <h1 class="titre">Explore The <br> <span>Nft</span> World</h1>
+        <div class="links">
+            <a  href="addcollection.php">add new collection</a>
+            <h1 class="titre">Explore The <br> <span>Nft</span> World</h1>
+            <a class="btmlinks" href="index.php?">add an nft</a>
+        </div>
         <div class="display">
 
             <?php 
@@ -72,7 +78,7 @@
              };
               ?>
         </div>
-        <a class="addnftlink" href="addcollection.php">add new collection</a>
+        
     </div>
     <!-- ************footer************ -->
     <footer>
@@ -111,7 +117,7 @@
         </div>
 
     </footer>
-
+             <script src="./logic.js"></script>
 </body>
 
 </html>

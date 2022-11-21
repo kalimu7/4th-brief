@@ -87,9 +87,9 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Collection</a></li>
-                    <li><a href="#">Statistiques</a></li>
+                    <li><a href="home.php">Acceuil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="statistics.php">Statistiques</a></li>
                 </ul>
             </nav>
         </div>
@@ -110,7 +110,8 @@
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
                 <h3>ADD NEW NFTS</h3> <br>
                 <input type="text" name="nftname" placeholder="enter name of your nft" class="box"> <br>
-                <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br>
+                <!-- <input type="text" name="nftdescription" placeholder="enter description of your nft" class="box"> <br> -->
+                <textarea placeholder="enter description of your nft" resize="none" name="nftdescription" class="box"></textarea> <br>
                 
                 <input type="number" name="nftprice" placeholder="enter the price of your nft ETH" class="box" min="0">
                 <br>

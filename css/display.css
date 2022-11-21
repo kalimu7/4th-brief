@@ -44,10 +44,19 @@ header .navigation-bar a .logo {
 .bodycontainer{
     background: hsl(259, 20%, 18%);
     padding: 10px 0;
+    min-height: 82vh;
 }
-.container #titre{
+.container {
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container a{
+    background-color: #6d338a;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: block;
+    margin-top: 60px;
 }
 .display{
     display: grid;
@@ -147,6 +156,8 @@ hr{
 /* ****************************** */
 /* ******************footer************ */
 footer{
+    position: sticky;
+    top: 100%;
     padding:10px 60px;
     
     display: grid;

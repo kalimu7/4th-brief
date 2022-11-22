@@ -226,6 +226,7 @@ hr{
 }
 .titre1{
     color: #fff;
+    /* text-align: center; */
 }
 .content-body .add-buttons {
     display: flex;
@@ -264,7 +265,7 @@ hr{
 /* End Card */
 /* ************footer************ */
 footer{
-    padding:10px 60px;
+    padding:40px 20px;
     
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -321,6 +322,13 @@ footer .newslatter i{
     }
 }
 @media screen and (max-width : 946px) {
+    .titre1{
+        color: #fff;
+        text-align: center;
+    }
+    .add-buttons{
+        margin:20px 0 ;
+    }
     .col1 img{
         padding-left: 0;
     }
@@ -376,7 +384,8 @@ footer .newslatter i{
     }
     
     .discover p{
-        font-size: 10px;
+        font-size: 15px;
+        padding: 0 20Px;
     }
     .col1 img{
         width: 200px;

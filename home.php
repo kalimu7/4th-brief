@@ -122,7 +122,7 @@
     <!-- Start Discover -->
     <div class="discover">
         <h2>How it Works</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum incidunt saepe quod vitae quis <br>
+        <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum incidunt saepe quod vitae quis <br>
             pariatur doloribus inventore vero atque provident illo, natus nesciunt porro ipsam accusamus </p>
         <div class="parts">
             <div class="sellyournft">

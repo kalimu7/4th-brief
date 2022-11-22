@@ -171,7 +171,7 @@ hr{
 footer{
     position: sticky;
     top: 100%;
-    padding:10px 60px;
+    padding:40px 20px;
     
     display: grid;
     grid-template-columns: auto auto auto auto;

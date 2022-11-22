@@ -30,6 +30,7 @@
                     <li><a href="statistics.php">Statistiques</a></li>
                 </ul>
             </nav>
+            <i class="fa-sharp fa-solid fa-list" id="humb"></i>
         </div>
     </header>
     <!-- *****header***** -->
@@ -183,6 +184,7 @@
 
     </footer>
     <!-- *********footer******* -->
+    <script src="./logic.js"></script>
 </body>
 
 </html>

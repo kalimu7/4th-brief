@@ -213,9 +213,7 @@ footer .newslatter i{
         grid-template-columns: auto auto auto ;
         gap: 20px;
     }
-    .col1 img{
-        padding-left: 150px;
-    }
+    
 }
 @media screen and (max-width : 946px) {
     

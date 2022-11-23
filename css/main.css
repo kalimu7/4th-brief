@@ -101,6 +101,7 @@ header .navigation-bar a .logo {
     font-size: 100px;
     font-weight: 500;
     padding-left: 50px;
+    margin-bottom: 20px;
     /* padding-top: 20px; */
 }
 .landing .home .own-nft {
@@ -125,6 +126,8 @@ header .navigation-bar a .logo {
     padding-top: 100px;
 }
 .col{
+    
+    padding-top: 50px;
     width:50%;
 }
 .col1{
@@ -393,7 +396,7 @@ footer .newslatter i{
     }
     
     .col{
-        padding: 0;
+        padding-top: 20px;
         margin-top: 50px;
     }
     .landing .home .create{

@@ -31,7 +31,7 @@
 
         for($i=0;$i<count($a);$i++){
             if(strcmp( $a[$i] , $collname) == 0 ){
-                $id_colletion = $a[$i+1];         
+                $id_colletion = $a[$i+1];        
             }
         }
         //
@@ -71,6 +71,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin page</title>
+    <meta name="description" content="Les NFT, c’est quoi ? Que peut-on acheter avec des NFT ? Pourquoi suscitent-ils tant d’engouement ? Focus sur ces jetons virtuels à l’avenir prometteur">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -205,7 +206,7 @@
         </div>
 
     </footer>
-                        <script src="./logic.js"></script>
+        <script src="./logic.js"></script>
 </body>
 
 </html>

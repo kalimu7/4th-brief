@@ -73,7 +73,7 @@ header .navigation-bar a .logo {
 }
 .display{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(330px,auto));
+    grid-template-columns: repeat(auto-fit,300px);
     justify-content: center;
     gap: 50px;
     padding: 20px 0;
@@ -114,6 +114,7 @@ header .navigation-bar a .logo {
 }
 .card .description{
     color: #a89ec9;
+    padding:5px 0 ;
 }
 .card .nftimg{
     width: 280px;

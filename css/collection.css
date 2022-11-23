@@ -89,7 +89,7 @@ header .navigation-bar a .logo {
     background: hsl(259, 20%, 18%);
     display: grid;
     /* grid-template-columns: auto auto auto; */
-    grid-template-columns: repeat(auto-fit,minmax(330px,auto));
+    grid-template-columns: repeat(auto-fit,300px);
     justify-content: center;
     gap: 50px;
 }
